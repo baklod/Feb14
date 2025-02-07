@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffcccc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 90%;
+    width: 400px;
+}
+
+.bear {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+}
+
+#yesButton {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#noButton {
+    background-color: #ccc;
+    color: black;
+    position: relative;
+}
+
+/* Additional Styles for Input Field in next-page.html */
+input[type="text"] {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 380px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+        max-width: 100%;
+    }
+
+    input[type="text"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

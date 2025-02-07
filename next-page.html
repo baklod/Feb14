@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay! 🎉</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Yay! I'm so happy! 💕</h1>
+        <p>Looking forward to our date! 😍</p>
+
+        <label for="fbName">Enter your Valentine's Facebook name and message him saying YES:</label>
+        <input type="text" id="fbName" placeholder="Enter Facebook name..." required>
+        <button onclick="redirectToFacebook()">Go to Profile</button>
+    </div>
+
+    <script>
+        function redirectToFacebook() {
+            let fbName = document.getElementById("fbName").value.trim();
+            if (fbName === "") {
+                alert("Please enter a Facebook name!");
+                return;
+            }
+
+            // Open Facebook search results for the entered name
+            let fbSearchUrl = `https://www.facebook.com/search/people/?q=${encodeURIComponent(fbName)}`;
+            window.open(fbSearchUrl, "_blank");
+
+            // Attempt to open Messenger with pre-filled "Yes" message (optional)
+            let messengerUrl = `https://m.me/${encodeURIComponent(fbName)}?text=Yes!%20💖`;
+            window.open(messengerUrl, "_blank");
+        }
+    </script>
+</body>
+</html>
